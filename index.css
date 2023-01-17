@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+    position: relative;
+    z-index: 1;
+    /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+    height: 50vh; /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+/*　背景画像設定　*/
+
+.slider-item01 {
+    background: url(item1.jpg);
+}
+
+.slider-item02 {
+    background: url(item2.jpg);
+}
+
+.slider-item03 {
+    background: url(item3.jpg);
+}
+
+.slider-item {
+    width: 100%; /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height: 50vh; /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat; /*背景画像をリピートしない*/
+    background-position: center; /*背景画像の位置を中央に*/
+    background-size: cover; /*背景画像が.slider-item全体を覆い表示*/
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    cursor: pointer;
+    outline: none;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev { /*戻る矢印の位置と形状*/
+    left: 2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next { /*次へ矢印の位置と形状*/
+    right: 2.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin: -50px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px; /*ドットボタンのサイズ*/
+    height: 8px; /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: #ccc; /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+    background: #333; /*ドットボタンの現在地表示の色*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+.header {
+    position: fixed;
+    height: 90px;
+    z-index: 101;
+}
+
+.header-logo {
+    padding-top: 30px;
+    padding-left: 30px;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+body {
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+    background-color: #f6f6f6;
+}
+
+.description {
+    position: absolute;
+    top: 50vh;
+    height: 50vh;
+    width: 100%;
+    z-index: 1000;
+    padding: 30px;
+}
+.item-detail{
+    font-size: 3vw;
+}
+
+h1,h3{
+    font-family: 'Spectral SC', "Yu Mincho Medium", "游明朝体", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+}
+
+h1 {
+    font-size: 5vw;
+    margin-bottom: 0.5vh;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+h3{
+    font-size: 4vw;
+    margin-bottom: 1vh;
+    font-weight: 400;
+}
+
+/*h1{*/
+/*    position: absolute;*/
+/*    z-index: 2;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    text-align: center;*/
+/*    font-size:6vw;*/
+/*    letter-spacing: 0.1em;*/
+/*    text-transform: uppercase;*/
+/*}*/
+
+.wrapper {
+    position: relative;
+}
+
+.container {
+    background: #555;
+}
+
+.container p {
+    padding: 300px 0;
+    text-align: center;
+    color: #fff;
+}
